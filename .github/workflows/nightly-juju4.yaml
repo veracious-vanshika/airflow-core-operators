@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 jobs:
   load-env:
@@ -36,6 +37,8 @@ jobs:
     uses: ./.github/workflows/tests.yaml
     secrets: inherit
     permissions:
+      contents: write
+      pull-requests: write
       issues: write
     with:
       juju-channel: ${{ needs.load-env.outputs.juju-channel }}
