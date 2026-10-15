@@ -16,6 +16,7 @@ jobs:
       search-root: charms
     permissions:
       pull-requests: read
+      issues: write
 
   run-tests:
     name: Unit + integration tests
