@@ -35,6 +35,8 @@ jobs:
     needs: load-env
     uses: ./.github/workflows/tests.yaml
     secrets: inherit
+    permissions:
+      issues: write
     with:
       juju-channel: ${{ needs.load-env.outputs.juju-channel }}
       postgres-channel: ${{ needs.load-env.outputs.postgres-channel }}
